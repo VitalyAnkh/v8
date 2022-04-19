@@ -216,7 +216,7 @@ class V8_EXPORT_PRIVATE Assembler : public AssemblerBase {
   int JumpOffset(Instr instr);
   int CJumpOffset(Instr instr);
   int CBranchOffset(Instr instr);
-  static int LdOffset(Instr instr);
+  static int LwOffset(Instr instr);
   static int AuipcOffset(Instr instr);
   static int JalrOffset(Instr instr);
 
@@ -1281,7 +1281,7 @@ class V8_EXPORT_PRIVATE Assembler : public AssemblerBase {
   static bool IsAddi(Instr instr);
   static bool IsOri(Instr instr);
   static bool IsSlli(Instr instr);
-  static bool IsLd(Instr instr);
+  static bool IsLw(Instr instr);
   void CheckTrampolinePool();
 
   // Get the code target object for a pc-relative call or jump.
